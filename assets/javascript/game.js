@@ -1,11 +1,14 @@
 
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
 'm','n','o','p','q','r','s','t','u','v','w','y','z'];
-var guesses = ['1','2','3','4','5','6','7','8','9'];
+var guesses = 9;
 var wins = "";
 var losses = "";
 var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 console.log(computerGuess)
+// function myFunction() {
+//     document.getElementById("game").reset();
+// }
 
 
 
@@ -15,13 +18,20 @@ document.onkeyup = function(event){
 
     if(userGuess === computerGuess){
         wins++;
+        guesses = 9
+        computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log(computerGuess)
+    }
 
-    }else{
+    else{
         guesses--;
     }
 
     if(guesses === 0){
         losses++
+        guesses = 9
+        computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log(computerGuess)
     }
 
     var html =
