@@ -6,9 +6,6 @@ var wins = "";
 var losses = "";
 var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 console.log(computerGuess)
-// function myFunction() {
-//     document.getElementById("game").reset();
-// }
 
 
 
