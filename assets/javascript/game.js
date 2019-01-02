@@ -16,20 +16,21 @@ document.onkeyup = function(event){
 
     if(userGuess === computerGuess){
         wins++;
-        guesses = 9
+        guesses = 9;
         computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
         console.log(computerGuess)
     }
 
     else{
         guesses--;
-        past.push(userGuess)
+        past.push(userGuess);
     }
 
     if(guesses === 0){
-        losses++
-        guesses = 9
+        losses++;
+        guesses = 9;
         computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+        past.length = [0];
         console.log(computerGuess)
     }
 
