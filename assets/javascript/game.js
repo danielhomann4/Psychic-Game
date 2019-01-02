@@ -4,6 +4,7 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
 var guesses = 9;
 var wins = "";
 var losses = "";
+var past = []
 var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 console.log(computerGuess)
 
@@ -22,6 +23,7 @@ document.onkeyup = function(event){
 
     else{
         guesses--;
+        past.push(userGuess)
     }
 
     if(guesses === 0){
@@ -38,7 +40,7 @@ document.onkeyup = function(event){
     "<p>Wins: " + wins + "</p>" +
     "<p>Losses: " + losses + "</p>" +
     "<p>Guesses Left: " + guesses + "</p>"+
-    "<p>Your Guesses so far: " + guessed + "</p>";
+    "<p>Your Guesses so far: " + past + "</p>";
 
     document.querySelector("#game").innerHTML = html;
 }
